@@ -1,0 +1,19 @@
+@media (max-width: 750px) {
+	body {
+		margin: 0 10px;
+	}
+
+	.post-footer {
+		.author {
+			text-align: center;
+			.author-image {
+				float: none;
+				margin-bottom: 20px;
+			}
+
+			.author-bio {
+				float: none;
+			}
+		}
+	}
+}

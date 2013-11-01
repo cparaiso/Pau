@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* Hides shit */
+.hidden { text-indent: -9999px; visibility: hidden; display: none; }
+
+.hidden-hover { visibility: hidden; }
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner { position: relative; width: 80%; max-width: 700px; margin: 0 auto; }
+
+/* Centres vertically yo. (IE8+) */
+.vertical { display: table-cell; vertical-align: middle; }
+
+body { font-family: "Open Sans", sans-serif; font-size: 16px; font-weight: 400; color: #000; margin: 0; }
+
+a:link, a:visited { color: black; }
+
+a:hover { color: #4080ff; }
+
+p, ul, ol, h1, h2, h3, h4, h5, h6, blockquote, dl, .pagination { max-width: 700px; margin: 0 auto; }
+
+hr { max-width: 700px; border: 2px solid #eee; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; font-weight: 300; text-rendering: optimizeLegibility; line-height: 1; margin-top: 0; }
+
+h1 { font-size: 2.5rem; line-height: 1.2em; letter-spacing: -2px; text-indent: -3px; font-weight: 700; }
+
+h2 { font-size: 2rem; line-height: 1.2em; letter-spacing: -1px; text-indent: -2px; }
+
+h3 { font-size: 1.8rem; }
+
+h4 { font-size: 1.6rem; }
+
+h5 { font-size: 1.4rem; }
+
+h6 { font-size: 1.2rem; }
+
+p, ul, ol { margin-top: 1.6em; margin-bottom: 1.6em; line-height: 1.5em; }
+
+ul, ol { list-style: inside; }
+
+ol ol, ul ul, ul ol, ol ul { margin: 0.4em 0; }
+
+hr { margin-top: 3.2em; margin-bottom: 3.2em; }
+
+pre { background: #f9f9f9; border: 1px solid #ddd; margin-top: 1.6em; margin-bottom: 1.6em; -moz-box-sizing: border-box; box-sizing: border-box; font-family: Inconsolata, monospace, sans-serif; font-size: 0.9em; white-space: pre; overflow: auto; }
+
+code { font-family: Inconsolata, monospace, sans-serif; white-space: pre-wrap; }
+
+pre code { display: block; max-width: 700px; margin: 0 auto; font-size: 14px; padding: 10px 16px; text-rendering: geometricPrecision; }
+
+blockquote { -moz-box-sizing: border-box; box-sizing: border-box; margin-top: 1.6em; margin-bottom: 1.6em; padding: 0 0 0 1.6em; border-left: #4a4a4a 0.4em solid; }
+
+blockquote p { margin: 0.8em 0; font-style: italic; }
+
+blockquote small { display: inline-block; margin: 0.8em 0 0.8em 1.5em; font-size: 0.9em; color: #ccc; }
+
+blockquote small:before { content: '\2014 \00A0'; }
+
+blockquote cite { font-weight: bold; }
+
+blockquote cite a { font-weight: normal; }
+
+table { -moz-box-sizing: border-box; box-sizing: border-box; margin: 1.6em 0; width: 100%; max-width: 100%; background-color: transparent; }
+
+table th, table td { padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border-top: 1px solid #efefef; }
+
+table th { color: #000; }
+
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0; }
+
+table tbody + tbody { border-top: 2px solid #efefef; }
+
+table table table { background-color: #fff; }
+
+table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th { background-color: #f6f6f6; }
+
+table.plain tbody > tr:nth-child(odd) > td, table.plain tbody > tr:nth-child(odd) > th { background: transparent; }
+
+.pagination { overflow: hidden; margin-bottom: 5em; margin-top: -2em; text-align: center; }
+.pagination .page-number { display: none; }
+.pagination .newer-posts, .pagination .older-posts { text-decoration: none; height: 2.75em; line-height: 2.75em; padding: 0 1em; -webkit-border-radius: 2.75em; -moz-border-radius: 2.75em; border-radius: 2.75em; border: 3px solid #000; text-transform: uppercase; font-weight: bold; }
+.pagination .newer-posts:hover, .pagination .older-posts:hover { color: #000; }
+.pagination .newer-posts { float: left; }
+.pagination .older-posts { float: right; }
+
+@font-face { font-family: 'fontello'; src: url("../fonts/fontello.eot?87897574"); src: url("../fonts/fontello.eot?87897574#iefix") format("embedded-opentype"), url("../fonts/fontello.woff?87897574") format("woff"), url("../fonts/fontello.ttf?87897574") format("truetype"), url("../fonts/fontello.svg?87897574#fontello") format("svg"); font-weight: normal; font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) { @font-face { font-family: 'fontello'; src: url('../font/fontello.svg?87897574#fontello') format('svg'); }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: inherit; width: 1em; margin-right: .2em; text-align: center; /* opacity: .8; */ /* For safety - reset parent styles, that can break glyph codes*/ font-variant: normal; text-transform: none; /* fix buttons height, for twitter bootstrap */ line-height: 1em; /* Animation center compensation - margins should be symmetric */ /* remove if not needed */ margin-left: .2em; /* you can be more comfortable with increased icons size */ /* font-size: 120%; */ /* Uncomment for 3D effect */ /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon { font-size: 16px; position: relative; top: -2px; }
+
+.icon-search:before { content: '\e800'; }
+
+/* '' */
+.icon-twitter:before { content: '\e80a'; }
+
+/* '' */
+.icon-mail-alt:before { content: '\e802'; }
+
+/* '' */
+.icon-heart:before { content: '\e803'; }
+
+/* '' */
+.icon-home:before { content: '\e805'; }
+
+/* '' */
+.icon-tags:before { content: '\e80e'; }
+
+/* '' */
+.icon-calendar:before { content: '\e804'; }
+
+/* '' */
+.icon-left-open:before { content: '\e80f'; }
+
+/* '' */
+.icon-mail:before { content: '\e801'; }
+
+/* '' */
+.icon-angle-left:before { content: '\e807'; }
+
+/* '' */
+.icon-angle-right:before { content: '\e808'; }
+
+/* '' */
+.icon-dribbble:before { content: '\e80d'; }
+
+/* '' */
+.icon-facebook-squared:before { content: '\e80c'; }
+
+/* '' */
+.icon-github-circled:before { content: '\e809'; }
+
+/* '' */
+.icon-gplus:before { content: '\e80b'; }
+
+/* '' */
+.icon-right-open:before { content: '\e806'; }
+
+/* '' */
+#site-header { padding-top: 120px; max-width: 700px; margin: 0 auto; margin-bottom: 120px; }
+#site-header a { text-decoration: none; }
+#site-header #blog-logo { width: 60px; height: auto; display: block; margin-bottom: 1em; }
+#site-header .blog-title { font-size: 22px; text-transform: uppercase; letter-spacing: 0px; max-width: none; }
+#site-header .blog-description { font-size: 18px; letter-spacing: 0; color: #aaa; max-width: none; }
+
+.post-title a { text-decoration: none; }
+
+.continue-reading { text-decoration: none; text-transform: uppercase; font-weight: bold; }
+.continue-reading:link, .continue-reading:visited { color: #4080ff; }
+
+.home-template hr, .archive-template hr { max-width: 800px; margin-bottom: 5em; margin-top: 5em; }
+.home-template .post, .archive-template .post { margin-bottom: 0; }
+
+.post-meta { max-width: 700px; margin: 0 auto; }
+.post-meta .post-date, .post-meta .post-tags { padding: 0 0.5em; }
+
+.post-content img { display: block; max-width: 100%; margin: 0 auto; height: auto; }
+
+.post-content .post-meta { margin-top: 3.2em; }
+
+.post-footer { border-top: 1px solid #ddd; padding-top: 32px; margin-top: 120px; }
+.post-footer .author, .post-footer .share { max-width: 700px; margin: 0 auto; }
+.post-footer .author { overflow: hidden; }
+.post-footer .author .author-image { width: 80px; -webkit-border-radius: 40px; -moz-border-radius: 40px; border-radius: 40px; float: left; margin-right: 20px; }
+.post-footer .author .author-name { font-weight: bold; }
+.post-footer .author .author-contact a { font-size: 14px; }
+.post-footer .author .author-contact a:link, .post-footer .author .author-contact a:visited { color: #999; text-decoration: none; }
+.post-footer .author .author-contact a:hover { color: #000; }
+.post-footer .author .author-contact a .icon { position: relative; top: 1px; }
+.post-footer h4, .post-footer p, .post-footer ul { width: auto; margin-top: 0; }
+
+.site-footer { text-align: center; font-size: 12px; color: #aaa; border-top: 1px solid #ddd; padding: 32px 0; }
+.site-footer section { margin-bottom: 0.5em; }
+.site-footer a { color: #aaa; }
+
+@media (max-width: 750px) { body { margin: 0 10px; }
+  .post-footer .author { text-align: center; }
+  .post-footer .author .author-image { float: none; margin-bottom: 20px; }
+  .post-footer .author .author-bio { float: none; } }
